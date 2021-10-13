@@ -9,6 +9,7 @@ const contactSchema = new Schema({
     message: String,
     name: String,
     telephone: String,
+    email: String
 });
 
 const Contact = mongoose.model("contacts", contactSchema);

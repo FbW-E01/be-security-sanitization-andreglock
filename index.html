@@ -340,10 +340,11 @@
 
         add.addEventListener("click", async (e) => {
           const data = {
-            message: document.querySelector("#message_input").value,
-            country: document.querySelector("#country").value,
-            telephone: document.querySelector("#telephone_input").value,
-            name: document.querySelector("#name_input").value,
+            message: document.getElementById("message_input").value,
+            country: document.getElementById("country").value,
+            telephone: document.getElementById("telephone_input").value,
+            name: document.getElementById("name_input").value,
+            email: document.getElementById("email_input").value,
           };
 
           const headers = { "Content-Type": "application/json" };
@@ -369,7 +370,7 @@
             msgs.forEach((m) =>
             list.insertAdjacentHTML(
                 "afterend",
-                `<p>A friend from ${m.country}: &quot;${m.message}&quot; </p>`
+                `<p>A friend from ${m.country}: &quot;${m.message}&quot; Email: ${m.email}</p>`
             )
             );
         } catch (e) {
