@@ -22,13 +22,20 @@ Do these in order!
     - Note that one of the fields is a telephone number
         - Think about and research telephone numbers
         - What kind of validation and sanitation would be good for this data?
+            - Probably [libphonenumber](https://github.com/google/libphonenumber) but the documentation is awful.
+            - I used isNumeric with symbols and a limited length range.
 3. Test
 4. Briefly explain these files
     - package.json
+        - assembles the scripts and dependencies for the developer automatically, also builds for deployment
     - .env.example
+        - contains secret environment variables such as database users and passwords
     - .gitignore
+        - tell git which files to ignore
     - database.js
+        - connects the server with the database
     - errorController.js
+        - catches errors with server requests and sends them as a response
 5. **BONUS** Make it so that the email is saved too!
 
 
